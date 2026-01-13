@@ -484,7 +484,7 @@ button:hover {
         /* фото занимает весь экран по высоте */
         object-fit: cover;
         /* сохраняем пропорции и обрезку по краям */
-        object-position: 60% center;
+        object-position: 70% center;
         /* смещаем фото горизонтально: 50% - центр, >50% вправо, <50% влево */
     }
 
@@ -505,3 +505,4 @@ button:hover {
         font-size: 12vw;
     }
 }
+
