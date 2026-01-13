@@ -384,21 +384,21 @@ button:hover {
     background: rgba(0, 0, 0, 0.4); /* полупрозрачная черная пленка */
     z-index: 1; /* чтобы была под текстом */
 }
+
 #play-music-btn {
     position: absolute;
-    top: 75%;
+    top: 85%; /* было 75%, сместили вниз */
     left: 50%;
     transform: translate(-50%, -50%);
     
-    width: 80px;
-    height: 80px;
+    width: 60px;  /* было 80px, немного уменьшили */
+    height: 60px; /* было 80px, немного уменьшили */
     border: none;
     border-radius: 50%;
     background-color: #ffffff; 
     cursor: pointer;
-    z-index: 3; /* <--- добавлено */
-    /* Тень падает вправо и вниз */
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25); 
+    z-index: 3;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25);
     
     transition: all 0.3s ease;
 
@@ -413,7 +413,7 @@ button:hover {
 #play-music-btn:hover {
     transform: translate(-50%, -50%) scale(1.1);
     background-color: #ffffff;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35); /* тень сильнее при наведении */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -468,3 +468,4 @@ button:hover {
         font-size: 12vw;
     }
 }
+
