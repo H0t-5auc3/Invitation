@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+/* Верхнее фото */
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+/* Общий контейнер */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Текст приглашения */
+.invite-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Дата и место */
+.event-info {
+    font-size: 26px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Фото ресторана */
+.venue img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Адрес */
+.address {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Форма */
+.form-wrapper {
+    background: #fff8f0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #e6b89c;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.rsvp h3 {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: #e6b89c;
+    color: #222;
+}
+
+.rsvp {
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.rsvp-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Поля ввода */
+.rsvp input[type="text"],
+.rsvp input[type="number"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #9aa4b2;
+    padding: 12px 5px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    outline: none;
+}
+
+.radio-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+}
+
+.radio-group input {
+    margin-right: 10px;
+    accent-color: #333;
+}
+
+/* Кнопка */
+.rsvp button {
+    background: transparent;
+    border: 1.5px solid #2f3b52;
+    padding: 12px 50px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2f3b52;
+    transition: all 0.3s ease;
+}
+
+.rsvp button:hover {
+    background: #2f3b52;
+    color: #fff;
+}
+
+/* ===== Красивые radio кнопки ===== */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    /* центрируем группу */
+    gap: 40px;
+    /* увеличиваем расстояние между кнопками */
+    margin: 20px 0;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+    /* увеличиваем текст */
+    color: #2f3b52;
+    cursor: pointer;
+}
+
+.radio-item input {
+    width: 18px;
+    /* увеличиваем радиокнопку */
+    height: 18px;
+    /* увеличиваем радиокнопку */
+    accent-color: #2f3b52;
+    cursor: pointer;
+}
+
+
+.radio-item span {
+    transition: color 0.3s ease;
+}
+
+.radio-item:hover span {
+    color: #c29a6b;
+}
+
+.invite-text {
+    text-align: center;
+    color: #2f3b52;
+    max-width: 600px;
+    margin: 60px auto;
+}
+
+/* Заголовок */
+.invite-title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Основной текст */
+.invite-body {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* Нижний акцент */
+.invite-footer {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+
+.event-datetime {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Дата — каллиграфическая */
+.event-date {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: 400;
+    color: #d2b08c;
+    /* тёплый золотой */
+    margin-bottom: 20px;
+}
+
+/* Время — чёткое, контрастное */
+.event-time {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    margin: 20px 0 25px;
+    /* сверху 10px, снизу 15px */
+}
+
+.event-place {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Блок с картинкой ресторана */
+.venue img {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.event-location {
+    text-align: center;
+    margin: 10px auto 30px;
+}
+
+.event-address {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: #2f3b52;
+    margin-bottom: 12px;
+    /* при желании можно уменьшить */
+}
+
+/* Кнопка */
+.route-button {
+    display: inline-block;
+    padding: 12px 38px;
+    background: #dcc1a4;
+    /* бежево-золотой */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.route-button:hover {
+    background: #c9a883;
+}
+
+/* уменьшить общие отступы контейнера и даты */
+.container {
+    padding: 20px 20px;
+    /* вместо 30px */
+}
+
+.event-datetime {
+    margin: 20px auto 8px;
+    /* вместо 50px auto */
+}
+
+.venue img {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    width: 70%;
+    margin: 35px auto;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(0, 0, 0, 0.35),
+            transparent);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-65%, +100%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    /* чтобы текст не вылезал на маленьких экранах */
+}
+
+.hero-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 8vw;
+    /* адаптивный размер */
+    font-style: italic;
+    line-height: 1;
+    animation: fadeZoom 1.6s ease forwards;
+    will-change: transform, opacity;
+}
+
+.hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: 4vw;
+    /* адаптивный размер */
+    font-style: italic;
+    animation: fadeUp 1.4s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+
+
+
+/* Стили кнопки */
+#play-music-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

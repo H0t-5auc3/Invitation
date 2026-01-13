@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение</title>
+</head>
+
+<body>
+    <section class="hero">
+        <img src="image/im.jpg" alt="Юбилей">
+
+        <!-- Текст по центру -->
+        <div class="hero-text">
+            <div class="hero-inline">
+                <span class="hero-number">55</span>
+                <span class="hero-sub">Юбилей</span>
+            </div>
+        </div>
+
+
+
+        <!-- Кнопка музыки снизу -->
+        <button id="play-music-btn">
+            <span>&#9658;</span>
+        </button>
+    </section>
+
+
+    <audio id="bg-music" loop>
+        <source src="music/hb.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('play-music-btn');
+
+        btn.addEventListener('click', () => {
+            music.play().catch(console.log);
+
+            document.getElementById('invite').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            btn.style.display = 'none';
+        });
+    </script>
+
+    <div class="container">
+        <div class="invite-text" id="invite">
+            <div class="invite-title">Дорогие друзья!</div>
+
+            <div class="invite-body">
+                Приглашаем вас на торжественный вечер<br>
+                посвящённый моему юбилею!
+            </div>
+
+            <div class="invite-footer">
+                Будем рады вас видеть!<br>
+                Возьмите с собой хорошее настроение!
+            </div>
+        </div>
+        <hr class="divider">
+
+        <div class="event-datetime">
+            <div class="event-date">14 Февраля 2026</div>
+            <div class="event-time">17:00</div>
+            <div class="event-place">Ресторан Galacreed</div>
+
+
+        </div>
+
+
+        <div class="venue">
+            <img src="image/restoran-modern.jpeg" alt="Ресторан Galacreed">
+        </div>
+
+        <div class="event-location">
+            <div class="event-address">
+                Адрес: г. Ереван, ул. Алека Манукяна, 12/6
+            </div>
+
+            <a href="https://yandex.com/maps/-/CLd9YEyB" target="_blank" class="route-button">
+                Как добраться
+            </a>
+        </div>
+
+        <br>
+        <!-- ФОРМА -->
+        <div class="rsvp">
+            <h3>Подтвердите, пожалуйста, своё присутствие</h3>
+
+            <form method="POST"
+                action="https://script.google.com/macros/s/AKfycbxyXpU6bfBDZtoNoxPEoGDnmTTxWLVcFHKGzgH7LCEQUD5XfGD1wZDC0QvzT0fRzjZ3ng/exec"
+                target="_blank">
+                <input type="text" name="name" placeholder="Имя Фамилия" required>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="attendance" value="Придем" checked>
+                        <span>Придем</span>
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="attendance" value="Не придем">
+                        <span>Не придем</span>
+                    </label>
+                </div>
+
+                <input type="number" name="guests" placeholder="Число гостей" min="0">
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Останавливаем стандартную отправку
+
+            const url = form.action;
+            const formData = new FormData(form);
+
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors', // Это исправляет ошибку CORS
+                body: formData
+            })
+                .then(() => {
+                    alert('Спасибо! Ваше присутствие подтверждено.');
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Ошибка!', error.message);
+                    alert('Произошла ошибка при отправке.');
+                });
+        });
+    </script>
+
+</body>
+
+</html>
