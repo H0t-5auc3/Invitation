@@ -394,7 +394,7 @@ button:hover {
 
 #play-music-btn {
     position: absolute;
-    top: 85%;
+    bottom: 14%;
     left: 50%;
     transform: translate(-50%, -50%) translateY(20px) scale(0.9);
     /* начальное смещение для анимации */
@@ -505,4 +505,5 @@ button:hover {
         font-size: 12vw;
     }
 }
+
 
